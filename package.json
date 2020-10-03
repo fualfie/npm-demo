@@ -2,15 +2,28 @@
   "name": "npm-demo",
   "version": "1.0.0",
   "description": "my npm package handbook",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pkgWindows": "pkg.cmd -t win package.json",
+    "pkgLinux": "pkg.cmd -t node8-linux-x64 package.json"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@fualfie/easy-server": "^1.6.2",
+    "@fualfie/easy-server": "^1.6.3",
     "@fualfie/websocket-server": "^1.1.4"
+  },
+  "bin": "server.js",
+  "pkg": {
+    "scripts": [
+      "routes/"
+    ],
+    "assets": [
+      "public/",
+      "node_modules/@fualfie/easy-server/browser/",
+      "node_modules/@fualfie/easy-server/common/"
+    ]
   }
 }
