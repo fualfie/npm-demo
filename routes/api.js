@@ -1,15 +1,14 @@
 const app = require('../server').Router()
+const ws = require('../server').websocket
 
 app.get('/api', (req, res) => {
-    console.info('Api is called')
     res.json({ time: new Date() })
 })
 
 app.get('/get', (req, res) => {
-    console.info(req.query)
+    ws.broadcast(new Date().toISOString())
     res.json({ time: new Date(), data: req.query })
 })
 app.post('/post', (req, res) => {
-    console.info(req.body)
     res.json({ time: new Date(), data: req.body })
 })
