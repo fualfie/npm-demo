@@ -6,13 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "pkgWindows": "pkg.cmd -t win package.json",
-    "pkgLinux": "pkg.cmd -t node8-linux-x64 package.json"
+    "pkgLinux": "pkg.cmd -t node8-linux-x64 package.json",
+    "browser": "start chrome \"http://localhost:5051\"",
+    "browserDev": "start chrome --incognito \"http://localhost:5051\"",
+    "kiosk": "start chrome -kiosk -fullscreen \"http://localhost:5051\"",
+    "kioskDev": "start chrome --incognito -kiosk -fullscreen \"http://localhost:5051\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@fualfie/easy-server": "^1.6.3",
+    "@fualfie/easy-server": "^1.7.0",
     "@fualfie/websocket-server": "^1.1.4"
   },
   "bin": "server.js",
