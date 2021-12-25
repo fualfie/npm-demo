@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./lib/vue.js"></script>
+    <script src="./fu-chart.js"></script>
+</head>
+
+<body>
+    <h1>Vue.js Demo</h1>
+    <div id="vue">
+        <fu-chart-low :value="battery" :error="'異常'" :info="'Battery'"></fu-chart-low>
+        <fu-chart-high :value="cpu" :error="'異常'" :info="'CPU'"></fu-chart-high>
+    </div>
+
+    <script type="text/javascript">
+        var vue = new Vue({
+            el: '#vue',
+            data: {
+                battery: 50,
+                cpu: 50,
+            },
+            watch: {
+                
+            },
+            computed: {
+                
+            },
+            created: function () {
+                this.fun1()
+            },
+            mounted: function () {
+                console.log("mounted")
+            },
+            methods: {
+                fun1: function () {
+                    var self = this
+                    console.log(self.value)
+                },
+            }
+        });
+    </script>
+</body>
+
+</html>

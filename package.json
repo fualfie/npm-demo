@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@fualfie/easy-server": "^1.7.0",
+    "@fualfie/easy-server": "^1.7.7",
     "@fualfie/websocket-server": "^1.1.4"
   },
   "bin": "server.js",

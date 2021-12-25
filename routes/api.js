@@ -2,6 +2,10 @@ const app = require('../server').Router()
 const ws = require('../server').websocket
 
 app.get('/api', (req, res) => {
+    console.log({ 
+        a: 1, 
+        b: "c" 
+    })
     res.json({ time: new Date() })
 })
 
